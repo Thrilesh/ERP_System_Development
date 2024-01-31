@@ -1,0 +1,15 @@
+<!-- home.html -->
+
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Welcome to Your ERP System</h1>
+    <p>Your ERP system streamlines business processes and enhances efficiency. Explore the modules below to manage purchases, inventory, and more.</p>
+
+    <ul>
+        <li><a href="{% url 'supplier_list' %}">Supplier Management</a></li>
+        <li><a href="{% url 'product_list' %}">Product Management</a></li>
+        <li><a href="{% url 'stock_movement_list' %}">Stock Movements</a></li>
+        <li><a href="{% url 'inventory_list' %}">Inventory Management</a></li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Stock Movement List</h2>
+  <ul>
+    {% for movement in movements %}
+      <li>{{ movement.timestamp }} - {{ movement.description }}</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'create_stock_movement' %}">Create Stock Movement</a>
+{% endblock %}

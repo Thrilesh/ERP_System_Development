@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Inventory List</h2>
+  <ul>
+    {% for inventory in inventories %}
+      <li>{{ inventory.product.name }} - {{ inventory.quantity }}</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'create_inventory' %}">Create Inventory</a>
+{% endblock %}

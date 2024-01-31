@@ -1,0 +1,30 @@
+<!-- templates/base.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Your Site{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'purcahse_management/css/styles.css' %}">
+    
+
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            {% comment %} <li><a href="/">Home</a></li> {% endcomment %}
+            {% block home_nav %}{% endblock %}
+        </ul>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+
+</body>
+
+</html>
